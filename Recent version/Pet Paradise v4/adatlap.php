@@ -46,8 +46,8 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-dark-2" target="_blank" rel="nofollow" style="padding: 28px 22px;">Kutyák</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-dark-2" style="padding: 28px 22px;">Cicák</a>
+          <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-dark-2" href="kutyak.php" rel="nofollow" style="padding: 28px 22px;">Kutyák</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-dark-2" href="macskak.php" style="padding: 28px 22px;">Cicák</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-dark-2" href="mailto:petparadisehungary2022@gmail.com?subject=Email%20c%C3%ADm" style="padding: 28px 22px;">Elérhetőségeink</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-dark-2" href="tel:+36 30 312 8605" style="padding: 28px 22px;">Hírek</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-dark-2" style="padding: 28px 22px;">Hasznos Információk</a>
