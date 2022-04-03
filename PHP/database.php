@@ -58,7 +58,7 @@ function close_connection($conn){
     $result=mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) > 0) {
         while($sor=mysqli_fetch_assoc($result)){ 
-            echo "<br>". "Chipszam: " . $sor["Chipszam"] . " - Nev: " . $sor["Nev"];
+            echo "<br>" . "Chipszam: " . $sor["Chipszam"] . " - Nev: " . $sor["Nev"];
         }
     }
     close_connection($conn);

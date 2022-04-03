@@ -11,7 +11,7 @@ function open_connection() {
         die("Connecting failed: " . mysqli_connect_error());
     }
     else{
-        echo("Successful connection");
+        //echo("Successful connection");
     }
 	// a karakterek helyes megjelenítése miatt be kell állítani a karakterkódolást!
 	//mysqli_query($conn, 'SET NAMES UTF-8');
@@ -36,11 +36,19 @@ function close_connection($conn){
 
     $sql="SELECT Chipszam,Nev,Tipus,Nem,Meret,Fajta,Kep,Szuletesidatum,Szin,Bekerulesidatum FROM allatok WHERE Tipus=0";
     $result=mysqli_query($conn, $sql);
+    echo '<div class="u-repeater">';
     if (mysqli_num_rows($result) > 0) {
         while($sor=mysqli_fetch_assoc($result)){ 
-            echo "<br>". "Chipszam: " . $sor["Chipszam"] . " - Nev: " . $sor["Nev"];
+           echo '<div class="u-align-left u-border-2 u-border-grey-75 u-container-style u-custom-item u-list-item u-repeater-item"><div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-1">' . 
+           '<a href="/adatlap.php?chipszam=' . $sor["Chipszam"] . '"><img src="data:image/jpg;charset=utf8;base64,' . base64_encode($sor["Kep"]) . '"/></a>' .
+                '<p class="u-text u-text-body-alt-color u-text-2">Név: ' . $sor["Nev"] . '</p>' .
+                '<p class="u-text u-text-body-alt-color u-text-2">Születési dátum: ' . $sor["Szuletesidatum"] . '</p>' .
+              '</div>'.
+           '</div>';
+            //echo "<br>". "Chipszam: " . $sor["Chipszam"] . " - Nev: " . $sor["Nev"];
         }
     }
+    echo '</div>';
     close_connection($conn);
  }
 
@@ -56,18 +64,45 @@ function close_connection($conn){
 
     $sql="SELECT Chipszam,Nev,Kep,Szuletesidatum FROM allatok WHERE Tipus=1";
     $result=mysqli_query($conn, $sql);
+    echo '<div class="u-repeater">';
     if (mysqli_num_rows($result) > 0) {
         while($sor=mysqli_fetch_assoc($result)){ 
-           echo "<div class="u-repeater"><div class="u-align-left u-border-2 u-border-grey-75 u-container-style u-custom-item u-list-item u-repeater-item"><div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-1">" . 
-                "<img src=data:image/jpg;charset=utf8;base64," . base64_encode($sor["Kep"]); . "/>" .
-                "<p class="u-text u-text-default u-text-2">" . $sor["Nev"] . "</p>" .
-                "<p class="u-text u-text-default u-text-2">" . $sor["Szuletesidatum"] . "</p>" .
-              "</div>".
-           "</div>".
-          "</div>"
+           echo '<div class="u-align-left u-border-2 u-border-grey-75 u-container-style u-custom-item u-list-item u-repeater-item"><div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-1">' . 
+           '<a href="/adatlap.php?chipszam=' . $sor["Chipszam"] . '"><img src="data:image/jpg;charset=utf8;base64,' . base64_encode($sor["Kep"]) . '"/></a>' .
+           '<p class="u-text u-text-body-alt-color u-text-2">Név: ' . $sor["Nev"] . '</p>' .
+                '<p class="u-text u-text-body-alt-color u-text-2">Születési dátum: ' . $sor["Szuletesidatum"] . '</p>' .
+              '</div>'.
+           '</div>';
             //echo "<br>". "Chipszam: " . $sor["Chipszam"] . " - Nev: " . $sor["Nev"];
         }
     }
+    echo '</div>';
+    close_connection($conn);
+ }
+
+ function adatlap($chipszam){
+
+    $conn= open_connection();
+    if ( !$conn ) { // ha nem sikerult csatlakozni, akkor kilepunk
+        echo "nincs connection";
+		return false;
+	}
+
+    $sql="SELECT * FROM allatok WHERE Chipszam=$chipszam";
+    $result=mysqli_query($conn, $sql);
+    echo '<div class="u-repeater">';
+    if (mysqli_num_rows($result) > 0) {
+        while($sor=mysqli_fetch_assoc($result)){ 
+           echo '<div class="u-align-left u-border-2 u-border-grey-75 u-container-style u-custom-item u-list-item u-repeater-item"><div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-1">' . 
+                '<img src="data:image/jpg;charset=utf8;base64,' . base64_encode($sor["Kep"]) . '"/>' .
+                '<p class="u-text u-text-body-alt-color u-text-2">Név: ' . $sor["Nev"] . '</p>' .
+                '<p class="u-text u-text-body-alt-color u-text-2">Születési dátum: ' . $sor["Szuletesidatum"] . '</p>' .
+              '</div>'.
+           '</div>';
+            //echo "<br>". "Chipszam: " . $sor["Chipszam"] . " - Nev: " . $sor["Nev"];
+        }
+    }
+    echo '</div>';
     close_connection($conn);
  }
 
