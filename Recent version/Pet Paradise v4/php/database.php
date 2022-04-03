@@ -97,6 +97,13 @@ function close_connection($conn){
                 '<img src="data:image/jpg;charset=utf8;base64,' . base64_encode($sor["Kep"]) . '"/>' .
                 '<p class="u-text u-text-body-alt-color u-text-2">Név: ' . $sor["Nev"] . '</p>' .
                 '<p class="u-text u-text-body-alt-color u-text-2">Születési dátum: ' . $sor["Szuletesidatum"] . '</p>' .
+                '<p class="u-text u-text-body-alt-color u-text-2">Típus: ' .  (($sor["Tipus"]=='1') ? 'kutya':'cica')  . '</p>' .
+                '<p class="u-text u-text-body-alt-color u-text-2">Fajta: ' . $sor["Fajta"] . '</p>' .
+                '<p class="u-text u-text-body-alt-color u-text-2">Méret: ' . $sor["Meret"] . '</p>' .
+                '<p class="u-text u-text-body-alt-color u-text-2">Szín: ' . $sor["Szin"] . '</p>' .
+                '<p class="u-text u-text-body-alt-color u-text-2">Menhelyre kerülés időpontja: ' . $sor["Bekerulesidatum"] . '</p>' .
+                '<p class="u-text u-text-body-alt-color u-text-2">Chip száma: ' . $sor["Chipszam"] . '</p>' .
+
               '</div>'.
            '</div>';
             //echo "<br>". "Chipszam: " . $sor["Chipszam"] . " - Nev: " . $sor["Nev"];
