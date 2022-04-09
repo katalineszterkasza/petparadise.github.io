@@ -4,11 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <meta name="keywords" content="">
-    <meta name="description" content="allatmenhely weboldal">
+    <meta name="Adatlap" content="adatlap">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>Pet Paradise HOME</title>
     <link rel="stylesheet" href="style.css" media="screen">
-<link rel="stylesheet" href="Pet-Paradise-HOME.css" media="screen">
+    <link rel="stylesheet" href="Pet-Paradise-HOME.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="pp.js" defer=""></script>
     

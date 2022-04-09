@@ -7,13 +7,13 @@
     <meta name="keywords" content="">
     <meta name="description" content="allatmenhely weboldal">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Pet Paradise HOME</title>
+    <title>Pet Paradise HOMEPAGE</title>
     <link rel="stylesheet" href="style.css" media="screen">
     <link rel="stylesheet" href="Pet-Paradise-HOME.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="pp.js" defer=""></script>
 
-    <link rel="icon" href="images/favicon.png">
+    <link rel="icon" href="images/heart.png">
     <link id="u-theme-google-font" rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet"
@@ -75,12 +75,12 @@
                         </li>
                         <li class="u-nav-item"><a
                                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-dark-2"
-                                href="mailto:petparadisehungary2022@gmail.com?subject=Email%20c%C3%ADm"
+                                href="mailto:petparadisehungary2022@gmail.com?subject=Email%20c%C3%ADm" 
                                 style="padding: 28px 22px;">Elérhetőségeink</a>
                         </li>
-                        <li class="u-nav-item"><a
+                        <li class="u-nav-item"><a href="./hirek.html" target="_blank"
                                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-dark-2"
-                                href="tel:+36 30 312 8605" style="padding: 28px 22px;">Hírek</a>
+                                href="" style="padding: 28px 22px;">Hírek</a>
                         </li>
                         
                        <li class="u-nav-item"><a href="./registration.html" target="_blank"
@@ -96,7 +96,7 @@
                                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-dark-2"
                                 style="padding: 28px 22px;">Információk</a>
                         </li>
-                        <li class="u-nav-item"><a
+                        <li class="u-nav-item"><a href="./sponsors.html" target="_blank"
                                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-dark-2"
                                 style="padding: 28px 22px;">Támogatás</a>
                         </li>
@@ -153,7 +153,7 @@
                                 </span>
                                 <br>
                             </h1>
-                            <a href="" https://petparadise.github.io"
+                            <a href="https://petparadise.github.io"
                                 class="u-active-palette-1-light-2 u-border-none u-btn u-button-style u-hover-palette-1-light-1 u-palette-1-dark-1 u-text-body-color u-btn-1">Nézz
                                 körül!</a>
                         </div>
@@ -186,7 +186,7 @@
                         <h4 class="u-text u-text-default u-text-3">Kutyák</h4>
                         <p class="u-text u-text-default u-text-4"> Örökbe fogadható és ideiglenes befogadóra váró kutyák
                         </p>
-                        <a href="https://petparadise.github.io"
+                        <a href=""
                             class="u-active-palette-1-light-2 u-border-1 u-border-palette-1-dark-2 u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-dark-1 u-radius-3 u-text-active-grey-60 u-text-body-color u-text-hover-grey-50 u-btn-2">Tovább
                         </a>
                     </div>
@@ -199,7 +199,7 @@
                         <h4 class="u-text u-text-default u-text-5">Legyél te is önkéntes nálunk!</h4>
                         <p class="u-text u-text-default u-text-6">Ha szeretnél önkéntes lenni nálunk&nbsp; olvass
                             tovább...</p>
-                        <a href="https://petparadise.github.io"
+                        <a href="./onkentes.html" target="_blank"
                             class="u-active-palette-1-light-2 u-border-1 u-border-palette-1-dark-2 u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-dark-1 u-radius-3 u-text-active-grey-60 u-text-body-color u-text-hover-grey-50 u-btn-3">Tovább
                         </a>
                     </div>
@@ -211,7 +211,7 @@
                                 alt=""></span>
                         <h4 class="u-text u-text-default u-text-7">Hírek</h4>
                         <p class="u-text u-text-default u-text-8">Hírek, aktualitások...</p>
-                        <a href="https://petparadise.github.io"
+                        <a href="./hirek.html" target="_blank"
                             class="u-active-palette-1-light-2 u-border-1 u-border-palette-1-dark-2 u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-dark-1 u-radius-3 u-text-active-grey-60 u-text-body-color u-text-hover-grey-50 u-btn-4">Tovább
                         </a>
                     </div>
@@ -448,8 +448,8 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                         <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-1">
                             <h6 class="u-text u-text-1"> Legyél te is kutyatréner</h6>
                             <p class="u-text u-text-default u-text-2">Kutyatréner képzéseinkről alább olvashatsz..</p>
-                            <a href="https://petparadise.github.io/kepzesek"
-                                class="u-active-palette-1-light-2 u-border-active-palette-4-light-3 u-border-hover-palette-4-light-3 u-border-none u-border-white u-btn u-btn-rectangle u-button-style u-custom-item u-hover-palette-1-light-1 u-palette-1-dark-1 u-btn-1">Tovább</a>
+                            <a href="./training.html" target="_blank"
+                                class="u-active-palette-1-light-2  u-border-active-palette-4-light-3 u-border-hover-palette-4-light-3 u-border-none u-border-white u-btn u-btn-rectangle u-button-style u-custom-item u-hover-palette-1-light-1 u-palette-1-dark-1 u-btn-1"> Tovább</a>
                         </div>
                     </div>
                     <div class="u-align-left u-border-2 u-border-grey-75 u-container-style u-list-item u-repeater-item">
@@ -457,16 +457,16 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                             <h6 class="u-text u-text-3">Adó 1%</h6>
                             <p class="u-text u-text-default u-text-4">Adód 1%-val kérünk te is támogasd a Pet Paradise
                                 Állatmenhelyet, hogy továbbra is segíthessünk. ..</p>
-                            <a href="https://petparadise.github.io/adoegyszazalek"
-                                class="u-active-palette-1-light-2 u-border-active-palette-2-base u-border-black u-border-hover-palette-2-base u-border-none u-btn u-button-style u-custom-item u-hover-palette-1-light-1 u-palette-1-dark-1 u-btn-2">Tovább</a>
+                                <a href="./ado.html" target="_blank"
+                                    class="u-active-palette-1-light-2 u-border-active-palette-4-light-3 u-border-hover-palette-4-light-3 u-border-none u-border-white u-btn u-btn-rectangle u-button-style u-custom-item u-hover-palette-1-light-1 u-palette-1-dark-1 u-btn-4">Tovább</a>
+                            </div>
                         </div>
-                    </div>
                     <div class="u-align-left u-border-2 u-border-grey-75 u-container-style u-list-item u-repeater-item">
                         <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-3">
                             <h6 class="u-text u-text-5"> Támogatóink</h6>
                             <p class="u-text u-text-default u-text-6">Aki munkájukkal, idejükkel, tárgyi vagy pénzügyi
                                 támogatással segítettek és segítene, nekünk....</p>
-                            <a href="https://petparadise.github.io/tamogatok"
+                            <a href="./sponsors.html" target="_blank"
                                 class="u-active-palette-1-light-2 u-border-active-palette-2-base u-border-black u-border-hover-palette-2-base u-border-none u-btn u-btn-rectangle u-button-style u-custom-item u-hover-palette-1-light-1 u-palette-1-dark-1 u-btn-3">Tovább</a>
                         </div>
                     </div>
@@ -475,7 +475,8 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                         <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-4">
                             <h6 class="u-text u-text-7">Shop</h6>
                             <p class="u-text u-text-default u-text-8">Kuya-macska kellék, eledel felszeréelések....</p>
-                            <a href="https://petparadise.github.io/shop"
+                            <a href="https://www.petparadepatika.hu" target="_blank"
+                            "
                                 class="u-active-palette-1-light-2 u-border-active-palette-4-light-3 u-border-hover-palette-4-light-3 u-border-none u-border-white u-btn u-btn-rectangle u-button-style u-custom-item u-hover-palette-1-light-1 u-palette-1-dark-1 u-btn-4">Tovább</a>
                         </div>
                     </div>
@@ -500,7 +501,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                 <p class="u-text u-text-2"> Heti gyakorisággal követheted gazdira váró kutyusainkat és cicusainkat.
                     Talán épp így találtok egymársa!</p>
                 <div class="u-form u-form-1">
-                    <form action="" https://petparadise.github.io" method="POST"
+                    <form action="registration.html" target="_blank" method="POST"
                         class="u-block-afe3-9 u-clearfix u-form-horizontal u-form-spacing-0 u-inner-form"
                         source="email">
                         <!-- hidden inputs for siteId and pageId -->
@@ -562,7 +563,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                 <a href="https://www.facebook.com/Petparadise-107425798544536/"
                                     class="u-active-palette-1-light-2 u-border-2 u-border-black u-btn u-button-style u-hover-palette-1-light-1 u-palette-1-dark-1 u-text-black u-text-hover-white u-btn-2">Nézzük
                                     meg!&nbsp;<span class="u-file-icon u-icon"><img src="images/21155.png"
-                                            alt=""></span>
+                                            alt="Facebook"></span>
                                 </a>
                             </div>
                         </div>
@@ -576,16 +577,16 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-ed7e">
         <div class="u-clearfix u-sheet u-sheet-1">
             <p class="u-small-text u-text u-text-variant u-text-1">Created by Adel Becsi and Katalin Eszter Kasza in
-                2022<br>All rights reserved
+                2022<br>All rights reserved 
             </p>
         </div>
     </footer>
     <section class="u-backlink u-clearfix u-grey-80">
         <a class="u-link" href="https://petparadise.github.io" target="_blank">
-            <span>One Page Template</span>
+            <span>Pet Paradise Állatmenhely Kutya-Macska</span>
         </a>
         <p class="u-text">
-            <span>created with</span>
+            <span>created in 2022 as a final project</span>
         </p>
         <a class="u-link" href="https://petparadise.github.io">
 
