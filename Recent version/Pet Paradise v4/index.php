@@ -83,7 +83,7 @@
                                 href="tel:+36 30 312 8605" style="padding: 28px 22px;">Hírek</a>
                         </li>
                         
-                       <li class="u-nav-item"><a href="./registration.html" target="_blank"
+                       <li class="u-nav-item"><a href="./registration1.1.php" target="_blank"
                                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-dark-2"
                                 style="padding: 28px 22px;"> Belépés/Regisztráció</a>
                         </li>

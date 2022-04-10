@@ -21,6 +21,43 @@ function open_connection() {
     return $conn;
 }
 
+function checkuser($username,$password) {
+    $conn= open_connection();
+    if ( !$conn ) { // ha nem sikerult csatlakozni, akkor kilepunk
+        echo "nincs connection";
+		return false;
+	}
+    $username = mysqli_real_escape_string($conn, $username);
+    $password = mysqli_real_escape_string($conn, $password);
+    // Check user is exist in the database
+    $query    = "SELECT * FROM `felhasznalok` WHERE usernev='$username'
+    AND jelszo='" . md5($password) . "'";
+    $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+    $rows = mysqli_num_rows($result);
+    return $rows == 1;
+}
+
+function insertuser($usernev,$email,$jelszo,$teljesnev,$dolgozoiazonosito,$iranyitoszam,$varos,$cim,$telefon) {
+    $conn= open_connection();
+    if ( !$conn ) { // ha nem sikerult csatlakozni, akkor kilepunk
+        echo "nincs connection";
+		return false;
+	}
+    $usernev = mysqli_real_escape_string($conn, $usernev);
+    $email    = mysqli_real_escape_string($conn, $email);
+    $jelszo = mysqli_real_escape_string($conn, $jelszo);
+    $teljesnev = mysqli_real_escape_string($conn, $jelszo);
+    $dolgozoiazonosito = mysqli_real_escape_string($conn, $jelszo);
+    $iranyitoszam = mysqli_real_escape_string($conn, $jelszo);
+    $varos = mysqli_real_escape_string($conn, $jelszo);
+    $cim = mysqli_real_escape_string($conn, $jelszo);
+    $telefon = mysqli_real_escape_string($conn, $jelszo);
+    $query    = "INSERT into `felhasznalok` (usernev, email, jelszo, teljesnev, dolgozoiazonosito, iranyitoszam, varos, cim, telefon)
+                 VALUES ('$usernev', '$email', '" . md5($jelszo) . "', '$teljesnev', '$dolgozoiazonosito', '$iranyitoszam', '$varos', '$cim', '$telefon')";
+    $result   = mysqli_query($conn, $query);
+    return $result;
+}
+
 function close_connection($conn){
     mysqli_close($conn);
  }
