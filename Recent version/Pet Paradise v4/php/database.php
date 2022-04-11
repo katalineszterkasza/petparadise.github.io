@@ -46,14 +46,16 @@ function insertuser($usernev,$email,$jelszo,$teljesnev,$dolgozoiazonosito,$irany
     $usernev = mysqli_real_escape_string($conn, $usernev);
     $email    = mysqli_real_escape_string($conn, $email);
     $jelszo = mysqli_real_escape_string($conn, $jelszo);
-    $teljesnev = mysqli_real_escape_string($conn, $jelszo);
-    $dolgozoiazonosito = mysqli_real_escape_string($conn, $jelszo);
-    $iranyitoszam = mysqli_real_escape_string($conn, $jelszo);
-    $varos = mysqli_real_escape_string($conn, $jelszo);
-    $cim = mysqli_real_escape_string($conn, $jelszo);
-    $telefon = mysqli_real_escape_string($conn, $jelszo);
-    $query    = "INSERT into `felhasznalok` (usernev, email, jelszo, teljesnev, dolgozoiazonosito, iranyitoszam, varos, cim, telefon)
-                 VALUES ('$usernev', '$email', '" . md5($jelszo) . "', '$teljesnev', '$dolgozoiazonosito', '$iranyitoszam', '$varos', '$cim', '$telefon')";
+    $teljesnev = mysqli_real_escape_string($conn, $teljesnev);
+    $dolgozoiazonosito = mysqli_real_escape_string($conn, $dolgozoiazonosito);
+    $iranyitoszam = mysqli_real_escape_string($conn, $iranyitoszam);
+    $varos = mysqli_real_escape_string($conn, $varos);
+    $cim = mysqli_real_escape_string($conn, $cim);
+    $telefon = mysqli_real_escape_string($conn, $telefon);
+    $adminjog = substr($dolgozoiazonosito, 0, 6 ) == 'PTPRDS';
+
+    $query    = "INSERT into `felhasznalok` (usernev, email, jelszo, teljesnev, dolgozoiazonosito, iranyitoszam, varos, cim, telefon, adminjog)
+                 VALUES ('$usernev', '$email', '" . md5($jelszo) . "', '$teljesnev', '$dolgozoiazonosito', '$iranyitoszam', '$varos', '$cim', '$telefon', '$adminjog')";
     $result   = mysqli_query($conn, $query);
     return $result;
 }

@@ -44,12 +44,26 @@
         <input type="text" class="login-input" name="varos" placeholder="Város" required/>
         <input type="text" class="login-input" name="cim" placeholder="Lakcím" required/>
         <input type="tel" class="login-input" name="telefon" placeholder="Telefonszám" required/>
-        <input type="text" class="login-input" name="dolgoziazonosito" placeholder="Dolgozoi azonosító" />
+        <label for="dolgozoe" >Dolgozó vagyok</label>
+        <input type="checkbox"  name="dolgozoe" id="dolgozoe" onclick="dolgozoiazonmutatas(this);"/>
+
+        <input type="text" class="login-input" id="dolgozoiazonosito" name="dolgozoiazonosito" placeholder="Dolgozoi azonosító" hidden/>
         <input type="submit" name="submit" value="Regisztráció" class="login-button"/>
         <p class="link"><a href="login.php">Click to Login</a></p>
     </form>
 <?php
     }
 ?>
+
+<script>
+    function dolgozoiazonmutatas(checkBox) {
+        if (checkBox.checked== true){
+            document.getElementById("dolgozoiazonosito").removeAttribute("hidden");
+        } else{
+            document.getElementById("dolgozoiazonosito").setAttribute("hidden", true);
+        }
+    }
+</script>
+
 </body>
 </html>
