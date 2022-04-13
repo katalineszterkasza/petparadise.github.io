@@ -34,6 +34,7 @@
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
     <link rel="canonical" href="/">
+    <?php  session_start();  ?>
 </head>
 
 <body class="u-body u-xl-mode">
@@ -82,11 +83,14 @@
                                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-dark-2"
                                 href="" style="padding: 28px 22px;">Hírek</a>
                         </li>
-                        
-                       <li class="u-nav-item"><a href="./registration1.1.php" target="_blank"
-                                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-dark-2"
-                                style="padding: 28px 22px;"> Belépés/Regisztráció</a>
-                        </li>
+                        <?php
+                            if(!isset($_SESSION["usernev"])) {
+                                echo '<li class="u-nav-item"><a href="./login.php" class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-dark-2" style="padding: 28px 22px;"> Belépés/Regisztráció</a></li>';
+                            }else{
+                                echo '<li class="u-nav-item"> Helló, '. $_SESSION["usernev"].'! (<a href="./logout.php" class="u-text-active-palette-1-base u-text-hover-palette-4-dark-2">Kijelentkezés</a>)</li>';
+                            }
+                        ?>
+                      
                     </ul>      
                 </div>
                 <div class="u-custom-menu u-nav-container">

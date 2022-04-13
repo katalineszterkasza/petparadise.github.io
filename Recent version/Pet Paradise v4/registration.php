@@ -1,61 +1,69 @@
 <!DOCTYPE html>
-<html lang="hu">
-   <head>
-      <title>Regisztráció és Bejelentkezés</title>
-      <meta charset="UTF-8"/>
-      <link rel="icon" href="images/heart.png">
-      <style>
-      
-        input, select, textarea, fieldset { margin-bottom: 10px; }
-
-        input[type="reset"], input[type="submit"] {
-            background-color:navy;
-            color:white;
-            border: 3px;
-            outline: none;
-            font-size: 16px;
-            width: 150px;
-            height: 40px;
-        }
-        body{
-        background-color:lightslategray
-      }
-        input:focus { background-color:navajowhite; }
-      
-      </style>
-   </head>
-   <body>
-      <form action="feldolgoz.php" method="POST" enctype="multipart/form-data">
-        <fieldset>
-          <h1><legend>Regisztrációs adatok</legend></h1>
-          <label>Teljes név: <input type="text" name="full-name" size="25"/></label> <br/>
-          <label>Felhasználónév: <input type="text" name="username" required/></label> <br/>
-          <label>Jelszó: <input type="password" name="passwd" required/></label> <br/>
-          <label>Jelszó ismét: <input type="password" name="passwd-check" required/></label> <br/>
-          <label>Születési dátum: <input type="date" name="date-of-birth" min="1920-01-01"/></label> <br/>
-          <label>E-mail: <input type="email" name="email" required/></label> <br/>
-          <label>Felhasználói azonosító: <input type="number" name="user-id" value="12345" disabled/></label> <br/>
-        </fieldset>
-
-        <input type="reset" name="reset-btn" value="Adatok törlése"/>
-        <input type="submit" name="submit-btn" value="Adatok elküldése"/>
-      </form>
-
-      
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Registration</title>
+    <link rel="stylesheet" href="style_reg.css"/>
+</head>
+<body>
+<?php
+    require('php/database.php');
     
+    if (isset($_REQUEST['usernev'])) {
+        
+        $usernev = stripslashes($_REQUEST['usernev']); 
+        $email    = stripslashes($_REQUEST['email']);
+        $jelszo = stripslashes($_REQUEST['jelszo']);
+        $teljesnev = stripslashes($_REQUEST['teljesnev']);
+        $dolgozoiazonosito = stripslashes($_REQUEST['dolgozoiazonosito']);
+        $iranyitoszam = stripslashes($_REQUEST['iranyitoszam']);
+        $varos = stripslashes($_REQUEST['varos']);
+        $cim = stripslashes($_REQUEST['cim']);
+        $telefon = stripslashes($_REQUEST['telefon']);
+       
+        if (insertuser($usernev,$email,$jelszo,$teljesnev,$dolgozoiazonosito,$iranyitoszam,$varos,$cim,$telefon)) {
+            echo "<div class='form'>
+                  <h3>Sikeres regisztáció.</h3><br/>
+                  <p class='link'>Bejelentkezéshez <a href='login.php'>kattints ide</a></p>
+                  </div>";
+        } else {
+            echo "<div class='form'>
+                  <h3>Kötelező mezők kitöltése hiányos.</h3><br/>
+                  <p class='link'>Űrlap újbóli kitöltéséhez <a href='registration.php'>kattints ide</a></p>
+                  </div>";
+        }
+    } else {
+?>
+    <form class="form" action="" method="post">
+        <h1 class="login-title">Regisztráció</h1>
+        <input type="text" class="login-input" name="usernev" placeholder="Felhasználó név" required />
+        <input type="email" class="login-input" name="email" placeholder="Email cím" required />
+        <input type="password" class="login-input" name="jelszo" placeholder="Jelszó" required />
+        <input type="text" class="login-input" name="teljesnev" placeholder="Teljes név" required/>
+        <input type="number" class="login-input" name="iranyitoszam" placeholder="Irányítószám" required/>
+        <input type="text" class="login-input" name="varos" placeholder="Város" required/>
+        <input type="text" class="login-input" name="cim" placeholder="Lakcím" required/>
+        <input type="tel" class="login-input" name="telefon" placeholder="Telefonszám" required/>
+        <label for="dolgozoe" >Dolgozó vagyok</label>
+        <input type="checkbox"  name="dolgozoe" id="dolgozoe" onclick="dolgozoiazonmutatas(this);"/>
 
- <h1>Bejelentkezés</h1>   
-    <form method="POST">
-        <fieldset>
-            <h4><legend> Bejelentkezési adatok</legend></h4>
-            <h5><label for="email">E-mail cím</label></h5>
-            <input type="email" id="email" name="email"> <br>
-            <h5><label for="password">Jelszó</label></h5>
-            <input type="password" name="passwd" placeholder="Jelszó" required> <br><br>
-            <input type="submit" value="Küldés">
+        <input type="text" class="login-input" id="dolgozoiazonosito" name="dolgozoiazonosito" placeholder="Dolgozoi azonosító" hidden/>
+        <input type="submit" name="submit" value="Regisztráció" class="login-button"/>
+        <p class="link"><a href="login.php">Kattints ide a bejelentkezéshez.</a></p>
     </form>
-</fieldset>
+<?php
+    }
+?>
+
+<script>
+    function dolgozoiazonmutatas(checkBox) {
+        if (checkBox.checked== true){
+            document.getElementById("dolgozoiazonosito").removeAttribute("hidden");
+        } else{
+            document.getElementById("dolgozoiazonosito").setAttribute("hidden", true);
+        }
+    }
+</script>
+
 </body>
-</html>
-   </body>
 </html>
