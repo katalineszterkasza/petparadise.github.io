@@ -7,7 +7,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="allatmenhely weboldal">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Pet Paradise HOMEPAGE</title>
+    <title>Pet Paradise Állatmenhely-Főoldal</title>
     <link rel="stylesheet" href="style.css" media="screen">
     <link rel="stylesheet" href="Pet-Paradise-HOME.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
@@ -33,7 +33,7 @@
     <meta property="og:title" content="Pet Paradise HOME">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
-    <link rel="canonical" href="/">
+    <link rel="canonical" href=".">
     <?php  session_start();  ?>
 </head>
 
@@ -100,7 +100,7 @@
                                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-dark-2"
                                 style="padding: 28px 22px;">Információk</a>
                         </li>
-                        <li class="u-nav-item"><a href="./sponsors.html" target="_blank"
+                        <li class="u-nav-item"><a href="./tamogataspp.html" target="_blank"
                                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-dark-2"
                                 style="padding: 28px 22px;">Támogatás</a>
                         </li>
@@ -213,9 +213,9 @@
                     <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-4"><span
                             class="u-custom-item u-file-icon u-icon u-icon-4"><img src="images/760910.png"
                                 alt=""></span>
-                        <h4 class="u-text u-text-default u-text-7">Hírek</h4>
-                        <p class="u-text u-text-default u-text-8">Hírek, aktualitások...</p>
-                        <a href="./hirek.html" target="_blank"
+                        <h4 class="u-text u-text-default u-text-7">Aktualitások</h4>
+                        <p class="u-text u-text-default u-text-8">Aktualitások gazdára talált cicák és kutyák ...</p>
+                        <a href="./aktualitasok.html" target="_blank"
                             class="u-active-palette-1-light-2 u-border-1 u-border-palette-1-dark-2 u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-dark-1 u-radius-3 u-text-active-grey-60 u-text-body-color u-text-hover-grey-50 u-btn-4">Tovább
                         </a>
                     </div>
@@ -597,5 +597,9 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
         </a>.
     </section>
 </body>
+
+<form method="get" action=".">
+      <button type="Back to top of the page">Paw back to the top</button>
+</form>
 
 </html>

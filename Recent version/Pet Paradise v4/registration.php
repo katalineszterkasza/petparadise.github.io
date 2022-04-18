@@ -64,6 +64,8 @@
         }
     }
 </script>
-<button onclick="history.back()">Go Back</button>
+<form method="get" action=".">
+    <button type="submit">Go Back</button>
+</form>
 </body>
 </html>

@@ -232,13 +232,9 @@
             </footer>
             <section class="u-backlink u-clearfix u-grey-80">
                 <a class="u-link" href="https://petparadise.github.io" target="_blank">
-                    <span>One Page Template</span>
                 </a>
                 <p class="u-text">
-                    <span>created with</span>
-                </p>
                 <a class="u-link" href="https://petparadise.github.io">
-
                 </a>.
             </section>
 </body>
