@@ -96,7 +96,7 @@
                 <div class="u-custom-menu u-nav-container">
                     <ul class="u-nav u-unstyled u-nav-1">
                       
-                        <li class="u-nav-item"><a
+                        <li class="u-nav-item"><a href="./info.html"target="_blank"
                                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-dark-2"
                                 style="padding: 28px 22px;">Információk</a>
                         </li>
